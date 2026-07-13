@@ -23,7 +23,7 @@ interface SectionLabelProps {
 
 export function SectionLabel({ children }: SectionLabelProps) {
   return (
-    <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-400">
+    <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-zinc-400">
       {children}
     </p>
   )
@@ -38,7 +38,7 @@ export function SectionHeading({ children, className = '' }: SectionHeadingProps
   return (
     <h2
       className={[
-        'text-balance text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl',
+        'text-balance text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl',
         className,
       ]
         .filter(Boolean)
@@ -58,7 +58,7 @@ export function SectionSubheading({ children, className = '' }: SectionSubheadin
   return (
     <p
       className={[
-        'mt-4 max-w-2xl text-lg leading-relaxed text-gray-500',
+        'mt-4 max-w-2xl text-lg leading-relaxed text-zinc-500',
         className,
       ]
         .filter(Boolean)

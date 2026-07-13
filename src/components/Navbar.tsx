@@ -29,7 +29,7 @@ export function Navbar() {
       className={[
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         scrolled
-          ? 'bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm'
+          ? 'bg-white/90 backdrop-blur-md border-b border-zinc-100 shadow-sm'
           : 'bg-transparent',
       ].join(' ')}
     >
@@ -37,7 +37,7 @@ export function Navbar() {
         <nav className="flex h-16 items-center justify-between">
           {/* Logo — opacity slightly low, feels washed out */}
           <a href="#" className="flex items-center gap-2.5 opacity-75">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-900">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-black">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                 <path
                   d="M9 2L15.5 6V12L9 16L2.5 12V6L9 2Z"
@@ -54,7 +54,7 @@ export function Navbar() {
                 />
               </svg>
             </div>
-            <span className="text-[17px] font-semibold tracking-tight text-gray-900">
+            <span className="text-[17px] font-semibold tracking-tight text-zinc-900">
               Meridian
             </span>
           </a>
@@ -65,7 +65,7 @@ export function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900"
+                className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900"
               >
                 {link.label}
               </a>
@@ -84,7 +84,7 @@ export function Navbar() {
 
           {/* Mobile menu toggle */}
           <button
-            className="flex h-9 w-9 items-center justify-center rounded-lg text-gray-600 hover:bg-gray-100 md:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-lg text-zinc-600 hover:bg-zinc-100 md:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -102,19 +102,19 @@ export function Navbar() {
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="border-t border-gray-100 bg-white pb-4 md:hidden">
+          <div className="border-t border-zinc-100 bg-white pb-4 md:hidden">
             <div className="flex flex-col gap-1 pt-3">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="px-2 py-2 text-sm font-medium text-gray-700 hover:text-gray-900"
+                  className="px-2 py-2 text-sm font-medium text-zinc-700 hover:text-zinc-900"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
-              <div className="mt-3 flex flex-col gap-2 border-t border-gray-100 pt-3">
+              <div className="mt-3 flex flex-col gap-2 border-t border-zinc-100 pt-3">
                 <Button variant="outline" size="sm" fullWidth>
                   Sign in
                 </Button>

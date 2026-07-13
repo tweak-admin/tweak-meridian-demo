@@ -12,13 +12,13 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    'bg-gray-900 text-white hover:bg-gray-800 active:bg-black shadow-sm',
+    'bg-black text-white hover:bg-zinc-800 active:bg-black shadow-sm',
   secondary:
-    'bg-gray-100 text-gray-900 hover:bg-gray-200 active:bg-gray-300 shadow-sm',
+    'bg-zinc-100 text-black hover:bg-zinc-200 active:bg-zinc-300 shadow-sm',
   ghost:
-    'bg-transparent text-gray-700 hover:bg-gray-100 active:bg-gray-200',
+    'bg-transparent text-zinc-700 hover:bg-zinc-100 active:bg-zinc-200',
   outline:
-    'bg-white text-gray-800 border border-gray-200 hover:border-gray-400 hover:bg-gray-50 shadow-sm',
+    'bg-white text-black border border-zinc-200 hover:border-zinc-400 hover:bg-zinc-50 shadow-sm',
 }
 
 const sizeClasses: Record<ButtonSize, string> = {
@@ -38,7 +38,7 @@ export function Button({
   return (
     <button
       className={[
-        'inline-flex items-center justify-center gap-2 font-medium transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed',
+        'inline-flex items-center justify-center gap-2 font-medium transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed',
         variantClasses[variant],
         sizeClasses[size],
         fullWidth ? 'w-full' : '',

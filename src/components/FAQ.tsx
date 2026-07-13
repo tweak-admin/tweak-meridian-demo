@@ -55,7 +55,7 @@ interface FAQItemProps {
 
 function FAQRow({ item, isOpen, onToggle }: FAQItemProps) {
   return (
-    <div className="border-b border-gray-100">
+    <div className="border-b border-zinc-100">
       <button
         className="flex w-full items-center justify-between gap-4 py-5 text-left"
         onClick={onToggle}
@@ -63,7 +63,7 @@ function FAQRow({ item, isOpen, onToggle }: FAQItemProps) {
       >
         {/* ⚠️ Some questions use slightly tighter line-height (leading-snug vs leading-normal) */}
         <span
-          className={`text-sm font-semibold text-gray-900 ${
+          className={`text-sm font-semibold text-zinc-900 ${
             item.loosePadding ? 'leading-normal' : 'leading-snug'
           }`}
         >
@@ -73,8 +73,8 @@ function FAQRow({ item, isOpen, onToggle }: FAQItemProps) {
         <span
           className={`flex shrink-0 items-center justify-center rounded-full border transition-colors ${
             isOpen
-              ? 'border-gray-200 bg-gray-100 text-gray-900'
-              : 'border-gray-200 bg-white text-gray-400'
+              ? 'border-zinc-200 bg-zinc-100 text-zinc-900'
+              : 'border-zinc-200 bg-white text-zinc-400'
           }`}
           style={{ width: isOpen ? 28 : 28, height: isOpen ? 28 : 28 }}
         >
@@ -92,7 +92,7 @@ function FAQRow({ item, isOpen, onToggle }: FAQItemProps) {
       {isOpen && (
         <div
           className={[
-            'pb-5 text-sm leading-relaxed text-gray-500',
+            'pb-5 text-sm leading-relaxed text-zinc-500',
             item.loosePadding ? 'pr-12' : 'pr-8',
           ].join(' ')}
         >
@@ -109,14 +109,14 @@ export function FAQ() {
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i)
 
   return (
-    <Section className="bg-[#F9F8F6]" id="faq">
+    <Section className="bg-zinc-50" id="faq">
       <Container narrow>
         <div className="mb-12 text-center">
           <SectionLabel>FAQ</SectionLabel>
           <SectionHeading>Everything you need to know</SectionHeading>
         </div>
 
-        <div className="rounded-2xl border border-gray-100 bg-white px-6 py-2 card-shadow">
+        <div className="rounded-2xl border border-zinc-100 bg-white px-6 py-2 card-shadow">
           {faqs.map((faq, i) => (
             <FAQRow
               key={faq.question}
@@ -127,9 +127,9 @@ export function FAQ() {
           ))}
         </div>
 
-        <p className="mt-8 text-center text-sm text-gray-400">
+        <p className="mt-8 text-center text-sm text-zinc-400">
           Still have questions?{' '}
-          <a href="#" className="font-medium text-gray-900 hover:underline">
+          <a href="#" className="font-medium text-zinc-900 hover:underline">
             Chat with our team →
           </a>
         </p>

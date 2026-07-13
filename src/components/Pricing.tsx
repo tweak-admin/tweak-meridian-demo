@@ -101,14 +101,14 @@ function PricingCard({ plan, annual }: PricingCardProps) {
       className={[
         'relative flex flex-col rounded-3xl p-8',
         plan.highlighted
-          ? 'bg-gray-900 text-white ring-2 ring-gray-900 card-shadow-lg scale-[1.02]'
-          : 'border border-gray-200 bg-white card-shadow',
+          ? 'bg-black text-white ring-2 ring-black card-shadow-lg scale-[1.02]'
+          : 'border border-zinc-200 bg-white card-shadow',
       ].join(' ')}
     >
       {/* Popular badge — slightly off-center due to uneven padding */}
       {plan.badge && (
         <div className="absolute -top-3.5 left-0 right-0 flex justify-center">
-          <span className="rounded-full bg-gray-900 px-4 py-1 text-xs font-semibold text-white shadow-md pl-5">
+          <span className="rounded-full bg-black px-4 py-1 text-xs font-semibold text-white shadow-md pl-5">
             {plan.badge}
           </span>
         </div>
@@ -118,14 +118,14 @@ function PricingCard({ plan, annual }: PricingCardProps) {
       <div className="mb-6">
         <p
           className={`mb-1.5 text-sm font-semibold uppercase tracking-widest ${
-            plan.highlighted ? 'text-gray-400' : 'text-gray-500'
+            plan.highlighted ? 'text-zinc-400' : 'text-zinc-500'
           }`}
         >
           {plan.name}
         </p>
         <p
           className={`text-sm leading-relaxed ${
-            plan.highlighted ? 'text-gray-400' : 'text-gray-500'
+            plan.highlighted ? 'text-zinc-400' : 'text-zinc-500'
           }`}
         >
           {plan.description}
@@ -139,21 +139,21 @@ function PricingCard({ plan, annual }: PricingCardProps) {
             className={[
               'font-bold tracking-tight',
               plan.name === 'Starter' ? 'text-4xl' : 'text-5xl',
-              plan.highlighted ? 'text-white' : 'text-gray-900',
+              plan.highlighted ? 'text-white' : 'text-zinc-900',
             ].join(' ')}
           >
             {price}
           </span>
           {price !== 'Custom' && (
             <span
-              className={`mb-2 text-sm ${plan.highlighted ? 'text-gray-400' : 'text-gray-400'}`}
+              className={`mb-2 text-sm ${plan.highlighted ? 'text-zinc-400' : 'text-zinc-400'}`}
             >
               / month
             </span>
           )}
         </div>
         {annual && price !== 'Custom' && price !== '$0' && (
-          <p className={`mt-1 text-xs ${plan.highlighted ? 'text-gray-400' : 'text-gray-400'}`}>
+          <p className={`mt-1 text-xs ${plan.highlighted ? 'text-zinc-400' : 'text-zinc-400'}`}>
             Billed annually · save 20%
           </p>
         )}
@@ -167,7 +167,7 @@ function PricingCard({ plan, annual }: PricingCardProps) {
           fullWidth={plan.ctaFullWidth}
           className={
             plan.highlighted
-              ? 'border-white/30 bg-white text-gray-900 hover:bg-gray-100'
+              ? 'border-white/30 bg-white text-black hover:bg-zinc-100'
               : ''
           }
         >
@@ -177,7 +177,7 @@ function PricingCard({ plan, annual }: PricingCardProps) {
 
       {/* Divider */}
       <div
-        className={`my-7 border-t ${plan.highlighted ? 'border-gray-700' : 'border-gray-100'}`}
+        className={`my-7 border-t ${plan.highlighted ? 'border-zinc-700' : 'border-zinc-100'}`}
       />
 
       {/* Features — Pro card has intentionally inconsistent spacing */}
@@ -199,11 +199,11 @@ function PricingCard({ plan, annual }: PricingCardProps) {
               className={`mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full ${
                 feature.included
                   ? plan.highlighted
-                    ? 'bg-gray-700 text-white'
-                    : 'bg-gray-100 text-gray-700'
+                    ? 'bg-zinc-700 text-white'
+                    : 'bg-zinc-100 text-zinc-700'
                   : plan.highlighted
-                  ? 'bg-gray-800 text-gray-600'
-                  : 'bg-gray-100 text-gray-300'
+                  ? 'bg-zinc-800 text-zinc-600'
+                  : 'bg-zinc-100 text-zinc-300'
               }`}
             >
               {feature.included ? (
@@ -220,11 +220,11 @@ function PricingCard({ plan, annual }: PricingCardProps) {
               className={`text-sm ${
                 feature.included
                   ? plan.highlighted
-                    ? 'text-gray-200'
-                    : 'text-gray-700'
+                    ? 'text-zinc-200'
+                    : 'text-zinc-700'
                   : plan.highlighted
-                  ? 'text-gray-600 line-through'
-                  : 'text-gray-300 line-through'
+                  ? 'text-zinc-600 line-through'
+                  : 'text-zinc-300 line-through'
               }`}
             >
               {feature.text}
@@ -240,7 +240,7 @@ export function Pricing() {
   const [annual, setAnnual] = useState(false)
 
   return (
-    <Section id="pricing" className="bg-[#F9F8F6]">
+    <Section id="pricing" className="bg-zinc-50">
       <Container>
         {/* Header */}
         <div className="mb-12 text-center">
@@ -251,11 +251,11 @@ export function Pricing() {
           </SectionSubheading>
 
           {/* Billing toggle — subtle, easy to miss */}
-          <div className="mt-8 inline-flex items-center gap-3 rounded-xl border border-gray-200 bg-white p-1.5">
+          <div className="mt-8 inline-flex items-center gap-3 rounded-xl border border-zinc-200 bg-white p-1.5">
             <button
               onClick={() => setAnnual(false)}
               className={`rounded-lg px-4 py-1.5 text-sm font-medium transition-colors ${
-                !annual ? 'bg-gray-900 text-white shadow-sm' : 'text-gray-500 hover:text-gray-700'
+                !annual ? 'bg-black text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-700'
               }`}
             >
               Monthly
@@ -263,11 +263,11 @@ export function Pricing() {
             <button
               onClick={() => setAnnual(true)}
               className={`rounded-lg px-4 py-1.5 text-sm font-medium transition-colors ${
-                annual ? 'bg-gray-900 text-white shadow-sm' : 'text-gray-500 hover:text-gray-700'
+                annual ? 'bg-black text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-700'
               }`}
             >
               Annual
-              <span className="ml-1.5 rounded-full bg-gray-100 px-1.5 py-0.5 text-xs font-semibold text-gray-700">
+              <span className="ml-1.5 rounded-full bg-zinc-100 px-1.5 py-0.5 text-xs font-semibold text-zinc-700">
                 -20%
               </span>
             </button>
@@ -282,9 +282,9 @@ export function Pricing() {
         </div>
 
         {/* Footer note */}
-        <p className="mt-10 text-center text-sm text-gray-400">
+        <p className="mt-10 text-center text-sm text-zinc-400">
           All plans include a 14-day free trial. No credit card required to start.{' '}
-          <a href="#" className="text-gray-700 hover:underline">
+          <a href="#" className="text-zinc-700 hover:underline">
             Compare all features →
           </a>
         </p>

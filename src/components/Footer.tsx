@@ -18,7 +18,7 @@ function SocialIcon({ children }: { children: React.ReactNode }) {
   return (
     <a
       href="#"
-      className="flex h-8 w-8 items-center justify-center rounded-lg border border-gray-200 text-gray-400 transition-colors hover:border-gray-400 hover:text-gray-700"
+      className="flex h-8 w-8 items-center justify-center rounded-lg border border-zinc-200 text-zinc-400 transition-colors hover:border-zinc-400 hover:text-zinc-700"
     >
       {children}
     </a>
@@ -27,14 +27,14 @@ function SocialIcon({ children }: { children: React.ReactNode }) {
 
 export function Footer() {
   return (
-    <footer className="border-t border-gray-100 bg-white">
+    <footer className="border-t border-zinc-100 bg-white">
       <Container>
         {/* Main footer grid */}
         <div className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-6">
           {/* Brand column */}
           <div className="lg:col-span-2">
             <a href="#" className="mb-5 flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-900">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-black">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                   <path
                     d="M9 2L15.5 6V12L9 16L2.5 12V6L9 2Z"
@@ -51,17 +51,17 @@ export function Footer() {
                   />
                 </svg>
               </div>
-              <span className="text-[17px] font-semibold tracking-tight text-gray-900">
+              <span className="text-[17px] font-semibold tracking-tight text-zinc-900">
                 Meridian
               </span>
             </a>
-            <p className="mb-6 max-w-xs text-sm leading-relaxed text-gray-500">
+            <p className="mb-6 max-w-xs text-sm leading-relaxed text-zinc-500">
               The workspace that thinks ahead. Built for teams who care about speed, craft,
               and clarity.
             </p>
 
             {/* Newsletter — input height slightly shorter than button */}
-            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-gray-400">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-zinc-400">
               Stay in the loop
             </p>
             <div className="flex gap-2">
@@ -69,9 +69,9 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="your@email.com"
-                className="h-9 flex-1 rounded-lg border border-gray-200 bg-gray-50 px-3 text-sm text-gray-800 placeholder-gray-400 outline-none focus:border-gray-400 focus:ring-2 focus:ring-gray-100"
+                className="h-9 flex-1 rounded-lg border border-zinc-200 bg-zinc-50 px-3 text-sm text-zinc-800 placeholder-zinc-400 outline-none focus:border-zinc-400 focus:ring-2 focus:ring-zinc-100"
               />
-              <button className="h-10 rounded-lg bg-gray-900 px-4 text-sm font-medium text-white hover:bg-gray-800">
+              <button className="h-10 rounded-lg bg-black px-4 text-sm font-medium text-white hover:bg-zinc-800">
                 Subscribe
               </button>
             </div>
@@ -80,7 +80,7 @@ export function Footer() {
           {/* Link columns — ⚠️ spacing inconsistent between columns */}
           {Object.entries(footerLinks).map(([section, links], colIndex) => (
             <div key={section} className="lg:col-span-1">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-gray-900">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-zinc-900">
                 {section}
               </p>
               {/* ⚠️ Some columns use gap-3, others gap-2 (alternating to add subtle inconsistency) */}
@@ -89,7 +89,7 @@ export function Footer() {
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-sm text-gray-500 transition-colors hover:text-gray-900"
+                      className="text-sm text-zinc-500 transition-colors hover:text-zinc-900"
                     >
                       {link}
                     </a>
@@ -101,9 +101,9 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-gray-100 py-6 sm:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-zinc-100 py-6 sm:flex-row">
           {/* ⚠️ Copyright opacity is too low — barely readable */}
-          <p className="text-xs text-gray-900 opacity-30">
+          <p className="text-xs text-zinc-900 opacity-30">
             © 2025 Meridian Technologies, Inc. All rights reserved.
           </p>
 

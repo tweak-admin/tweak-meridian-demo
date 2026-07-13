@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     name: 'Priya Mehta',
     role: 'VP of Engineering',
     company: 'Stackline',
-    avatarShade: 'bg-gray-900',
+    avatarShade: 'bg-black',
     initials: 'PM',
   },
   {
@@ -34,7 +34,7 @@ const testimonials: Testimonial[] = [
     name: 'James Okafor',
     role: 'Head of Product',
     company: 'Northbound',
-    avatarShade: 'bg-gray-600',
+    avatarShade: 'bg-zinc-600',
     initials: 'JO',
     // ⚠️ Smaller avatar — should match the others
     smallAvatar: true,
@@ -45,7 +45,7 @@ const testimonials: Testimonial[] = [
     name: 'Sofia Reinholt',
     role: 'CTO',
     company: 'Arclight Systems',
-    avatarShade: 'bg-gray-500',
+    avatarShade: 'bg-zinc-500',
     initials: 'SR',
     // ⚠️ Less bottom padding
     lessPaddingBottom: true,
@@ -61,7 +61,7 @@ function StarRating() {
         <svg key={i} width="14" height="14" viewBox="0 0 14 14" fill="none">
           <path
             d="M7 1l1.6 3.4 3.7.5-2.7 2.7.6 3.7L7 9.5l-3.2 1.8.6-3.7-2.7-2.7 3.7-.5L7 1z"
-            fill="#374151"
+            fill="#18181b"
           />
         </svg>
       ))}
@@ -85,7 +85,7 @@ export function Testimonials() {
             <div
               key={t.name}
               className={[
-                'flex flex-col rounded-2xl border border-gray-100 bg-white p-7 card-shadow',
+                'flex flex-col rounded-2xl border border-zinc-100 bg-white p-7 card-shadow',
                 t.lessPaddingBottom ? 'pb-4' : '',
               ]
                 .filter(Boolean)
@@ -95,7 +95,7 @@ export function Testimonials() {
 
               {/* Quote */}
               <blockquote className="mt-4 flex-1">
-                <p className="text-sm leading-relaxed text-gray-600">"{t.quote}"</p>
+                <p className="text-sm leading-relaxed text-zinc-600">"{t.quote}"</p>
               </blockquote>
 
               {/* Author */}
@@ -111,11 +111,11 @@ export function Testimonials() {
                   {t.initials}
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-gray-900">{t.name}</p>
-                  <p className="text-xs text-gray-500">{t.role}</p>
+                  <p className="text-sm font-semibold text-zinc-900">{t.name}</p>
+                  <p className="text-xs text-zinc-500">{t.role}</p>
                   {/* ⚠️ Third card uses text-xs for company instead of text-sm */}
                   <p
-                    className={`font-medium text-gray-700 ${
+                    className={`font-medium text-zinc-700 ${
                       t.smallCompany ? 'text-xs' : 'text-sm'
                     }`}
                   >
@@ -133,7 +133,7 @@ export function Testimonials() {
             (company) => (
               <p
                 key={company}
-                className="text-sm font-semibold tracking-wide text-gray-300"
+                className="text-sm font-semibold tracking-wide text-zinc-300"
               >
                 {company}
               </p>

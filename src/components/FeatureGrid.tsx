@@ -22,7 +22,7 @@ const features: Feature[] = [
     description:
       'Work alongside your team with live cursors, presence indicators, and instant sync across every device. No more "did you see my message?"',
     icon: (
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" className="text-gray-700">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" className="text-zinc-700">
         <path
           d="M15 8a4 4 0 01-8 0M11 4v1M4.93 6.93l.7.7M2 13h1M4.93 19.07l.7-.7M11 18v1M17.07 19.07l-.7-.7M20 13h-1M17.07 6.93l-.7.7"
           stroke="currentColor"
@@ -38,7 +38,7 @@ const features: Feature[] = [
     description:
       'Build powerful workflows without writing code. Trigger actions based on events, schedules, or conditions across your entire stack.',
     icon: (
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" className="text-gray-700">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" className="text-zinc-700">
         <path
           d="M13 2L4 13h7l-2 7 9-11h-7l2-9z"
           stroke="currentColor"
@@ -55,7 +55,7 @@ const features: Feature[] = [
     // ⚠️ Icon is slightly smaller here (20 vs 22)
     smallIcon: true,
     icon: (
-      <svg width="20" height="20" viewBox="0 0 22 22" fill="none" className="text-gray-700">
+      <svg width="20" height="20" viewBox="0 0 22 22" fill="none" className="text-zinc-700">
         <path
           d="M3 17l4-5 4 3 4-7 4 2"
           stroke="currentColor"
@@ -72,7 +72,7 @@ const features: Feature[] = [
     description:
       'Enterprise-grade security baked into every layer. SOC 2 Type II certified, with SSO, audit logs, and granular permission controls to keep your data safe.',
     icon: (
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" className="text-gray-700">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" className="text-zinc-700">
         <path
           d="M11 2l7 3v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V5l7-3z"
           stroke="currentColor"
@@ -94,7 +94,7 @@ const features: Feature[] = [
     description:
       'Connect Meridian to the tools your team already loves. GitHub, Slack, Figma, Linear, Notion, and 200+ more integrations available on day one.',
     icon: (
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" className="text-gray-700">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" className="text-zinc-700">
         <circle cx="6" cy="6" r="3" stroke="currentColor" strokeWidth="1.75" />
         <circle cx="16" cy="6" r="3" stroke="currentColor" strokeWidth="1.75" />
         <circle cx="6" cy="16" r="3" stroke="currentColor" strokeWidth="1.75" />
@@ -115,7 +115,7 @@ const features: Feature[] = [
     // ⚠️ This card has tighter padding than the others
     tightPadding: true,
     icon: (
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" className="text-gray-700">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" className="text-zinc-700">
         <path
           d="M11 3C7.13 3 4 6.13 4 10c0 2.4 1.2 4.5 3 5.74V18h8v-2.26C16.8 14.5 18 12.4 18 10c0-3.87-3.13-7-7-7z"
           stroke="currentColor"
@@ -143,24 +143,24 @@ function FeatureCard({ feature }: FeatureCardProps) {
 
   return (
     <div
-      className={`group rounded-2xl border border-gray-100 bg-white transition-all duration-200 hover:border-gray-300 hover:shadow-md card-shadow ${padding}`}
+      className={`group rounded-2xl border border-zinc-100 bg-white transition-all duration-200 hover:border-zinc-300 hover:shadow-md card-shadow ${padding}`}
     >
       <div
-        className={`mb-5 inline-flex items-center justify-center rounded-xl bg-gray-100 ${
+        className={`mb-5 inline-flex items-center justify-center rounded-xl bg-zinc-100 ${
           feature.smallIcon ? 'h-10 w-10' : 'h-11 w-11'
         }`}
       >
         {feature.icon}
       </div>
-      <h3 className="mb-2.5 text-base font-semibold text-gray-900">{feature.title}</h3>
-      <p className="text-sm leading-relaxed text-gray-500">{feature.description}</p>
+      <h3 className="mb-2.5 text-base font-semibold text-zinc-900">{feature.title}</h3>
+      <p className="text-sm leading-relaxed text-zinc-500">{feature.description}</p>
     </div>
   )
 }
 
 export function FeatureGrid() {
   return (
-    <Section id="features" className="bg-[#F9F8F6]">
+    <Section id="features" className="bg-zinc-50">
       <Container>
         {/* Section header */}
         <div className="mb-14 text-center">
@@ -168,7 +168,7 @@ export function FeatureGrid() {
           {/* ⚠️ Section heading feels slightly small — could use text-4xl or text-5xl */}
           <SectionHeading>
             Everything your team needs,{' '}
-            <span className="text-gray-400">nothing it doesn't</span>
+            <span className="text-zinc-400">nothing it doesn't</span>
           </SectionHeading>
           <SectionSubheading className="mx-auto">
             Meridian was built from the ground up for modern engineering and product
