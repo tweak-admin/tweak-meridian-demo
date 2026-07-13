@@ -1,7 +1,7 @@
-import React from 'react'
+import type { ReactNode } from 'react'
 
 interface SectionProps {
-  children: React.ReactNode
+  children: ReactNode
   className?: string
   id?: string
 }
@@ -18,7 +18,7 @@ export function Section({ children, className = '', id }: SectionProps) {
 }
 
 interface SectionLabelProps {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 export function SectionLabel({ children }: SectionLabelProps) {
@@ -30,7 +30,7 @@ export function SectionLabel({ children }: SectionLabelProps) {
 }
 
 interface SectionHeadingProps {
-  children: React.ReactNode
+  children: ReactNode
   className?: string
 }
 
@@ -50,7 +50,7 @@ export function SectionHeading({ children, className = '' }: SectionHeadingProps
 }
 
 interface SectionSubheadingProps {
-  children: React.ReactNode
+  children: ReactNode
   className?: string
 }
 

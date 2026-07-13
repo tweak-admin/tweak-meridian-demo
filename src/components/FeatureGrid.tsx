@@ -1,11 +1,11 @@
-import React from 'react'
+import type { ReactNode } from 'react'
 import { Container } from './ui/Container'
 import { Section, SectionLabel, SectionHeading, SectionSubheading } from './ui/Section'
 
 interface Feature {
   title: string
   description: string
-  icon: React.ReactNode
+  icon: ReactNode
   // intentional imperfection flag
   tightPadding?: boolean
   smallIcon?: boolean

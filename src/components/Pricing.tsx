@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Container } from './ui/Container'
 import { Section, SectionLabel, SectionHeading, SectionSubheading } from './ui/Section'
 import { Button } from './ui/Button'

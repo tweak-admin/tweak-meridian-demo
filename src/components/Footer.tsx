@@ -1,4 +1,4 @@
-import React from 'react'
+import type { ReactNode } from 'react'
 import { Container } from './ui/Container'
 
 // ⚠️ Review opportunity: Footer column spacing is inconsistent (some columns use gap-3, others gap-2)
@@ -14,7 +14,7 @@ const footerLinks = {
   Legal: ['Privacy policy', 'Terms of service', 'Cookie policy', 'Security'],
 }
 
-function SocialIcon({ children }: { children: React.ReactNode }) {
+function SocialIcon({ children }: { children: ReactNode }) {
   return (
     <a
       href="#"
