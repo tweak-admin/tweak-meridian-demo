@@ -156,37 +156,35 @@ export function Hero() {
       />
 
       <Container>
-        <div className="pb-16 pt-20 text-center lg:pt-28">
-          {/* Badge — px padding too wide vs py, feels unbalanced */}
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-5 py-1.5">
+        <div className="pb-16 pt-16 text-left lg:pt-24">
+          {/* Badge with shiny text sweep */}
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-5 py-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-black" />
-            <span className="text-xs font-semibold tracking-wide text-zinc-700">
+            <span className="shiny-text text-xs font-semibold tracking-wide">
               Now in public beta
             </span>
           </div>
 
-          {/* Headline — could go one size larger on desktop */}
-          <h1 className="text-balance mx-auto max-w-4xl text-5xl font-bold tracking-tight text-zinc-900 sm:text-6xl lg:text-6xl">
+          <h1 className="text-balance max-w-3xl text-5xl font-bold tracking-tight text-zinc-900 sm:text-6xl">
             The workspace that{' '}
             <span className="bg-gradient-to-r from-zinc-900 to-zinc-500 bg-clip-text text-transparent">
               thinks ahead
-            </span>{' '}
-            of your team
+            </span>
           </h1>
 
-          {/* Supporting text */}
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-zinc-500">
-            Meridian brings your projects, people, and analytics into one beautifully
-            designed workspace. Stop switching tabs — start shipping faster.
+          <p className="mt-5 max-w-xl text-lg leading-relaxed text-zinc-500">
+            Projects, people, and analytics in one workspace. Ship faster.
           </p>
 
-          {/* CTAs — group too close to supporting text, needs more top margin */}
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
             <Button variant="primary" size="lg">
               Start for free
             </Button>
-            {/* Ghost button — border barely visible on warm white bg */}
-            <Button variant="ghost" size="lg" className="border border-zinc-200 text-zinc-700">
+            <Button
+              variant="ghost"
+              size="lg"
+              className="w-[235px] border-0 bg-[#3b06f9] text-[#fcfcfc] hover:bg-[#2f05c7] hover:text-[#fcfcfc] active:bg-[#2704a8]"
+            >
               <svg
                 width="16"
                 height="16"
