@@ -156,7 +156,7 @@ export function Hero() {
       />
 
       <Container>
-        <div className="pb-16 pt-16 text-left lg:pt-24">
+        <div className="pb-16 pt-16 text-center lg:pt-24">
           {/* Badge with shiny text sweep */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-5 py-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-black" />
@@ -165,26 +165,22 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="text-balance max-w-3xl text-5xl font-bold tracking-tight text-zinc-900 sm:text-6xl">
+          <h1 className="text-balance mx-auto max-w-3xl text-5xl font-bold tracking-tight text-zinc-900 sm:text-6xl">
             The workspace that{' '}
             <span className="bg-gradient-to-r from-zinc-900 to-zinc-500 bg-clip-text text-transparent">
               thinks ahead
             </span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-zinc-500">
+          <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-zinc-500">
             Projects, people, and analytics in one workspace. Ship faster.
           </p>
 
-          <div className="mt-10 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button variant="primary" size="lg">
               Start for free
             </Button>
-            <Button
-              variant="ghost"
-              size="lg"
-              className="w-[235px] border-0 bg-[#3b06f9] text-[#fcfcfc] hover:bg-[#2f05c7] hover:text-[#fcfcfc] active:bg-[#2704a8]"
-            >
+            <Button variant="outline" size="lg" className="w-[235px]">
               <svg
                 width="16"
                 height="16"
