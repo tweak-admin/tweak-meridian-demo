@@ -159,7 +159,7 @@ function PricingCard({ plan, annual }: PricingCardProps) {
         )}
       </div>
 
-      {/* CTA */}
+      {/* CTA — Pro uses purple fill from review edit */}
       <div className={plan.ctaFullWidth ? 'w-full' : ''}>
         <Button
           variant={plan.highlighted ? 'outline' : plan.ctaVariant}
@@ -167,7 +167,7 @@ function PricingCard({ plan, annual }: PricingCardProps) {
           fullWidth={plan.ctaFullWidth}
           className={
             plan.highlighted
-              ? 'border-white/30 bg-white text-black hover:bg-zinc-100'
+              ? '!border-transparent !bg-[rgb(81,39,196)] !text-zinc-50 hover:!bg-[rgb(68,32,168)] hover:!text-zinc-50'
               : ''
           }
         >
