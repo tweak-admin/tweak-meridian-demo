@@ -3,7 +3,6 @@ import { Button } from './ui/Button'
 
 // ⚠️ Review opportunity: CTA group is too close to supporting text — needs more top margin
 // ⚠️ Review opportunity: "Now in public beta" badge padding is unbalanced (px > py)
-// ⚠️ Review opportunity: "Watch demo" button border barely visible against warm white bg
 // ⚠️ Review opportunity: Hero illustration has tight top margin — needs breathing room
 // ⚠️ Review opportunity: Headline could be 1 size larger on desktop (text-6xl → text-7xl)
 
@@ -180,7 +179,7 @@ export function Hero() {
             <Button variant="primary" size="lg">
               Start for free
             </Button>
-            <Button variant="outline" size="lg" className="w-[235px]">
+            <Button variant="accent" size="lg" className="w-[235px]">
               <svg
                 width="16"
                 height="16"

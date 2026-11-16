@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react'
 
-type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'outline'
+type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'outline' | 'accent'
 type ButtonSize = 'sm' | 'md' | 'lg'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -19,6 +19,8 @@ const variantClasses: Record<ButtonVariant, string> = {
     'bg-transparent text-zinc-700 hover:bg-zinc-100 active:bg-zinc-200',
   outline:
     'bg-white text-black border border-zinc-200 hover:border-zinc-400 hover:bg-zinc-50 shadow-sm',
+  accent:
+    'bg-[#4C12ED] text-white hover:bg-[#3F0FC7] active:bg-[#350CA8] shadow-sm',
 }
 
 const sizeClasses: Record<ButtonSize, string> = {
